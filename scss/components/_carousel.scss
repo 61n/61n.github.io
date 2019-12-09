@@ -1,0 +1,32 @@
+.carousel-indicators {
+  @include breakpoint($sm) {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > li,
+    > li.active {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.carousel__overlay {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(1, 1, 1, .2);
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}

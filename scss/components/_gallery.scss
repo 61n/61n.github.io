@@ -1,0 +1,47 @@
+.gallery__row {
+  display: flex;
+  flex-wrap: wrap;
+  &:before,
+  &:after {
+    content: none;
+  }
+}
+
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: none;
+  margin-top: 30px;
+
+
+  @include breakpoint($sm) {
+  }
+
+  @include on-event() {
+    &:after {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &:after {
+    @include transition(transform, .1s);
+
+    content: '';
+    display: block;
+    height: 15px;
+    width: calc(100% - 30px);
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translate3d(0, -100%, 0);
+    @include breakpoint($sm) {
+
+
+    }
+  }
+}
+
+.gallery__image {
+  width: 100%;
+}

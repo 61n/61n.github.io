@@ -1,0 +1,32 @@
+input.form-control {
+  border: 1px solid $c-black;
+  border-radius: 0;
+}
+
+.btn-default {
+  border-radius: 0;
+  background: $c-black;
+  color: $c-white;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-search {
+  display: flex;
+  .form-group {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+
+  input {
+    border-right: 0;
+  }
+
+  button {
+    min-width: 100px;
+    padding: 0 10px;
+    border: 0;
+  }
+}

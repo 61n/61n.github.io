@@ -1,0 +1,149 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  @include transition(color, .1s);
+
+  color: inherit;
+  text-decoration: none;
+
+  @include on-event {
+    color: $c-yellow;
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: $f-primary;
+  color: $c-black;
+}
+
+section {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.section + .section {
+  margin-top: 40px;
+
+  @include breakpoint($sm) {
+    margin-top: 90px;
+  }
+}
+
+.section + .section--progress,
+.section + .promotion {
+  margin-top: 0;
+}
+
+.section--features {
+  flex-direction: column;
+
+  @include breakpoint($sm) {
+    flex-direction: row;
+  }
+}
+
+
+
+*[class^="col-"] {
+  float: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.container {
+  display: block;
+  //flex-wrap: wrap;
+  //justify-content: space-between;
+  //align-items: center;
+}
+
+.container,
+.row {
+  &:before,
+  &:after {
+    content: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ega-course__row {
+  background: $c-white;
+  padding: 20px 0;
+
+  @include breakpoint($md) {
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 70px;
+  }
+}
+
+.ega-benefit {
+  h2 {
+    color: $c-yellow;
+  }
+}
+
+.ega-benefit__row {
+  align-items: stretch;
+}
+
+.ega-benefit__item {
+  margin: 0 30px 20px 30px;
+
+  @include breakpoint($md) {
+    margin: 0 0 20px 0;
+  }
+}
+
+.ega-benefit__block {
+  height: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 6.75px 2.25px rgba(95, 95, 95, 0.23);
+}
+
+.ega-benefit__image {
+  margin-bottom: 10px;
+}
+
+.ega-benefit__button {
+  margin-top: 20px;
+}

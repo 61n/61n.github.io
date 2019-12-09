@@ -1,0 +1,24 @@
+.plan__image-right {
+  @include breakpoint($sm) {
+    margin-right: calc(-1 * 1/7 * 100%);
+  }
+}
+
+.plan__image-left {
+  @include breakpoint($sm) {
+    margin-left: calc(-1 * 1/7 * 100%);
+  }
+}
+
+.plan__block + .plan__block {
+  margin-top: 30px;
+}
+
+.plan__block--left {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include breakpoint($sm) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,120 @@
+.ega-header {
+  background: #566af0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  z-index: 10;
+  padding: 10px 0 12px 0;
+
+  + * {
+    margin-top: 64px;
+  }
+}
+
+.ega-header__wrapper-logo {
+  margin: 0;
+}
+
+.ega-logo {
+  width: auto;
+  height: 36px;
+}
+
+.ega-header__list {
+  display: none;
+
+  @include breakpoint($md) {
+    display: block;
+  }
+}
+
+.ega-hero {
+  padding: 20px 0;
+  text-align: center;
+  color: #ffffff;
+  background-image: url('../images/ega_banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  z-index: 3;
+
+  h2, h3 {
+    font-family: $f-secondary;
+  }
+  p {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 3px solid $c-white;
+  }
+  h2 {
+    color: $c-yellow;
+  }
+}
+
+.ega-hero__container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ega-reason {
+  h2 {
+    color: $c-orange;
+    text-align: center;
+  }
+}
+
+.ega-reason__quote {
+  height: 108px;
+  width: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.ega-reason__image {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.ega-reason__row {
+  align-items: stretch;
+}
+
+.ega-reason__item {
+  display: flex;
+  margin-top: 30px;
+}
+
+.ega-reason__block {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 6.75px 2.25px rgba(95, 95, 95, 0.23);
+  text-align: center;
+
+  strong {
+    color: $c-purple;
+  }
+}
+
+.ega-course {
+  background: $c-purple-light;
+
+  h2 {
+    color: $c-white;
+  }
+  h3 {
+    color: $c-orange;
+  }
+  h4 {
+  }
+}
+
+.ega-detail {
+  h3 {}
+}
