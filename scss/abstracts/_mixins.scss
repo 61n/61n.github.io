@@ -46,3 +46,27 @@
   transition-delay: $delay;
 }
 
+@mixin col-list {
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: calc( #{$i} / #{$columns} * 100% );
+      padding-left: $padding;
+      padding-right: $padding;
+    }
+  }
+}
+
+@mixin col-md-list {
+  @for $i from 1 through $columns {
+    .col-md-#{$i} {
+      @include breakpoint($md) {
+        width: calc( #{$i} / #{$columns} * 100% );
+        padding-left: $padding-md;
+        padding-right: $padding-md;
+      }
+    }
+  }
+}
+
+@include col-list;
+@include col-md-list;

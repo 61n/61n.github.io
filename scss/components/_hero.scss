@@ -1,0 +1,42 @@
+.ega-hero {
+  padding: 20px 0;
+  text-align: center;
+  color: #ffffff;
+  background-image: url('../images/ega_banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  z-index: 3;
+
+  h2, h3 {
+    font-family: $f-secondary;
+  }
+  p {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 3px solid $c-white;
+  }
+  h2 {
+    color: $c-yellow;
+  }
+}
+
+.ega-hero__container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint($md) {
+    max-width: $max-width;
+  }
+}
+
+.ega-hero__block {
+  &--right {
+    @include breakpoint($md) {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+}

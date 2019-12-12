@@ -1,0 +1,37 @@
+.ega-reason {
+  h2 {
+    color: $c-orange;
+    text-align: center;
+  }
+}
+
+.ega-reason__quote {
+  height: 108px;
+  width: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.ega-reason__image {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.ega-reason__row {
+  align-items: stretch;
+}
+
+.ega-reason__item {
+  display: flex;
+  margin-top: 30px;
+}
+
+.ega-reason__block {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 6.75px 2.25px rgba(95, 95, 95, 0.23);
+  text-align: center;
+}

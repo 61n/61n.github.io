@@ -1,0 +1,74 @@
+.ega-detail {
+  background: $c-blue;
+
+  h2 {
+    text-align: center;
+    color: $c-orange;
+  }
+  ul {
+    margin-top: 0;
+  }
+  li {
+    position: relative;
+    padding-left: 10px;
+
+    &:before {
+      content: "•";
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.ega-detail__block {
+  background: $c-white;
+}
+
+.ega-detail__teacher {
+  padding: 15px;
+}
+
+.ega-detail__outer {
+  max-width: 400px;
+  margin: 0 auto;
+
+  @include breakpoint($md) {
+    max-width: none;
+  }
+}
+
+.ega-detail__wrapper {
+  display: flex;
+  border-bottom: 2px solid #ebebeb;
+}
+
+.ega-detail__title {
+  padding: 15px;
+  color: $c-white;
+  background: linear-gradient(to right, #4d60d4, #5728c8);
+  border-radius: 3px 3px 0 0;
+}
+
+.ega-detail__image {
+  width: 51px;
+  height: 51px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.ega-detail__info-teacher {
+  max-width: 100%;
+  h4 {
+    margin: 0;
+  }
+}
+
+.ega-detail__content {
+  ul li:before {
+    content: "-";
+  }
+}

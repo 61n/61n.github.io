@@ -1,0 +1,30 @@
+.ega-why {
+  color: $c-white;
+  background: $c-blue-dark;
+}
+
+.ega-why__wrapper {}
+
+.ega-why__block {
+  display: flex;
+  align-items: center;
+
+  &:not(last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.ega-why__image {
+  width: 45px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.ega-why__content {
+  max-width: calc(100% - 55px);
+  text-transform: uppercase;
+
+  strong {
+    color: inherit;
+  }
+}

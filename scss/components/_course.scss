@@ -1,0 +1,24 @@
+.ega-course {
+  background: $c-purple-light;
+
+  h2 {
+    color: $c-white;
+  }
+  h3 {
+    color: $c-orange;
+  }
+  h4 {
+  }
+}
+
+.ega-course__block {
+  background: $c-white;
+  padding: 20px 0;
+
+  @include breakpoint($md) {
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 70px;
+  }
+}

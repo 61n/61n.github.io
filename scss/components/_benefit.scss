@@ -1,0 +1,31 @@
+.ega-benefit {
+  h2 {
+    color: $c-yellow;
+  }
+}
+
+.ega-benefit__row {
+  align-items: stretch;
+}
+
+.ega-benefit__item {
+  margin: 0 30px 20px 30px;
+
+  @include breakpoint($md) {
+    margin: 0 0 20px 0;
+  }
+}
+
+.ega-benefit__block {
+  height: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 6.75px 2.25px rgba(95, 95, 95, 0.23);
+}
+
+.ega-benefit__image {
+  margin-bottom: 10px;
+}
+
+.ega-benefit__button {
+  margin-top: 20px;
+}
