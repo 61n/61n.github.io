@@ -175,6 +175,9 @@ body {
 section {
   padding: 30px 0;
   overflow: hidden; }
+  @media (min-width: 992px) {
+    section {
+      padding: 50px 0; } }
 
 html {
   overflow-x: hidden; }
@@ -495,7 +498,8 @@ p {
       top: 0; }
 
 .ega-detail__block {
-  background: #ffffff; }
+  background: #ffffff;
+  margin-bottom: 20px; }
 
 .ega-detail__teacher {
   padding: 15px; }
@@ -679,18 +683,34 @@ input.form-control {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
-  .ega-why__block:not(last-child) {
-    margin-bottom: 15px; }
+  align-items: center;
+  margin-bottom: 15px; }
+  @media (min-width: 992px) {
+    .ega-why__block {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center; } }
 
 .ega-why__image {
   width: 45px;
   height: auto;
   margin-right: 10px; }
+  @media (min-width: 992px) {
+    .ega-why__image {
+      margin-right: 0;
+      height: 95px;
+      width: auto; } }
 
 .ega-why__content {
   max-width: calc(100% - 55px);
   text-transform: uppercase; }
+  @media (min-width: 992px) {
+    .ega-why__content {
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto; } }
   .ega-why__content strong {
     color: inherit; }
 

@@ -8,9 +8,11 @@
 .ega-why__block {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 
-  &:not(last-child) {
-    margin-bottom: 15px;
+  @include breakpoint($md) {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -18,12 +20,24 @@
   width: 45px;
   height: auto;
   margin-right: 10px;
+
+  @include breakpoint($md) {
+    margin-right: 0;
+    height: 95px;
+    width: auto;
+  }
 }
 
 .ega-why__content {
   max-width: calc(100% - 55px);
   text-transform: uppercase;
 
+  @include breakpoint($md) {
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   strong {
     color: inherit;
   }
