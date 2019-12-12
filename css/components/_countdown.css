@@ -1,0 +1,5 @@
+.ega-countdown {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4660ca), to(#7fc8d6));
+  background: -webkit-linear-gradient(top, #4660ca, #7fc8d6);
+  background: -o-linear-gradient(top, #4660ca, #7fc8d6);
+  background: linear-gradient(to bottom, #4660ca, #7fc8d6); }
