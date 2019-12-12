@@ -11,9 +11,39 @@
   border-radius: 20px;
   max-width: 460px;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 10px;
   color: $c-white;
   background: linear-gradient(to left, #fc9900, #fcde00);
   box-shadow: 0 1px 0 1px rgba(77, 109, 204, 0.64);
   text-shadow: 0 3px 3.56px rgba(182, 77, 31, 0.59);
+
+  @include breakpoint($md) {
+    padding: 30px 10px;
+  }
+}
+
+.ega-countdown__wrapper-form {
+  margin-top: 20px;
+}
+
+.ega-countdown__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ega-countdown__input {
+  margin-bottom: 20px;
+
+  label,
+  input {
+    width: 100%;
+  }
+  label {
+    color: $c-white;
+  }
+  input {
+    padding: 10px;
+    color: $c-black;
+    border: 1px solid #aee1f5;
+  }
 }

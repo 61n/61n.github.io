@@ -669,7 +669,7 @@ input.form-control {
   border-radius: 20px;
   max-width: 460px;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 10px;
   color: #ffffff;
   background: -webkit-gradient(linear, right top, left top, from(#fc9900), to(#fcde00));
   background: -webkit-linear-gradient(right, #fc9900, #fcde00);
@@ -678,6 +678,31 @@ input.form-control {
   -webkit-box-shadow: 0 1px 0 1px rgba(77, 109, 204, 0.64);
   box-shadow: 0 1px 0 1px rgba(77, 109, 204, 0.64);
   text-shadow: 0 3px 3.56px rgba(182, 77, 31, 0.59); }
+  @media (min-width: 992px) {
+    .ega-countdown__price {
+      padding: 30px 10px; } }
+
+.ega-countdown__wrapper-form {
+  margin-top: 20px; }
+
+.ega-countdown__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.ega-countdown__input {
+  margin-bottom: 20px; }
+  .ega-countdown__input label,
+  .ega-countdown__input input {
+    width: 100%; }
+  .ega-countdown__input label {
+    color: #ffffff; }
+  .ega-countdown__input input {
+    padding: 10px;
+    color: #242526;
+    border: 1px solid #aee1f5; }
 
 .ega-why {
   color: #ffffff;
