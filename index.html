@@ -18,6 +18,10 @@
 </head>
 
 <body data-spy="scroll" data-target="#primary-nav">
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0&appId=2254989608072966&autoLogAppEvents=1"></script>
+
 <div class="page-sales page-layout">
   <!-- header -->
   <section class="ega-header">
@@ -528,7 +532,7 @@
           </div>
         </div>
         <div class="col-12">
-          <div class="ega-countdown__wrapper-form">
+          <div class="mha ega-countdown__wrapper-form">
             <form action="/page/default/submit" id="form-register" name="landing-page-id" class="ega-countdown__form">
               <div class="col-12 col-md-4 ega-countdown__input">
                 <label for="ega-countdown-input">Ho va ten (*)</label>
@@ -540,13 +544,25 @@
               </div>
               <div class="col-12 col-md-4 ega-countdown__input">
                 <label for="ega-countdown-phone">So dien thoai (*)</label>
-                <input type="tel" id="ega-countdown-phone" placeholder="Nhap so dien thoai" required>
+                <input type="number" id="ega-countdown-phone" placeholder="Nhap so dien thoai" required>
               </div>
               <div class="col-12 text-center ega-countdown__submit">
                 <button type="submit" class="ega-button ega-countdown__button">ĐĂNG KÝ NGAY</button>
+                <p>*Bộ phận tư vấn sẽ liên hệ với bạn trong vòng 24h để xác nhận và thanh toán đơn hàng, vui lòng giữ máy bên mình.<br>
+                  Chân thành cảm ơn</p>
               </div>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ega-comment">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 justify-center">
+          <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
         </div>
       </div>
     </div>

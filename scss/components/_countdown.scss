@@ -24,6 +24,11 @@
 
 .ega-countdown__wrapper-form {
   margin-top: 20px;
+  max-width: 300px;
+
+  @include breakpoint($md) {
+    max-width: none;
+  }
 }
 
 .ega-countdown__form {
@@ -41,9 +46,16 @@
   label {
     color: $c-white;
   }
+
   input {
     padding: 10px;
     color: $c-black;
     border: 1px solid #aee1f5;
+  }
+}
+
+.ega-countdown__submit {
+  p {
+    color: $c-black;
   }
 }

@@ -683,7 +683,11 @@ input.form-control {
       padding: 30px 10px; } }
 
 .ega-countdown__wrapper-form {
-  margin-top: 20px; }
+  margin-top: 20px;
+  max-width: 300px; }
+  @media (min-width: 992px) {
+    .ega-countdown__wrapper-form {
+      max-width: none; } }
 
 .ega-countdown__form {
   display: -webkit-box;
@@ -703,6 +707,9 @@ input.form-control {
     padding: 10px;
     color: #242526;
     border: 1px solid #aee1f5; }
+
+.ega-countdown__submit p {
+  color: #242526; }
 
 .ega-why {
   color: #ffffff;
