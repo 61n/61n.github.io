@@ -1,17 +1,32 @@
-.site-footer {
-  background: $c-black;
-  color: $c-white;
-}
+.ega-footer {
+  color: $c-black;
 
-.site-footer__wrapper {
-  padding: 20px 0;
-}
+  li {
+    @include breakpoint($md) {
+      display: inline-block;
 
-.site-footer__block {
-  margin-bottom: 20px;
-}
+      &:not(last-child) {
+        a {
+          margin-right: 10px;
+          border-right: 1px solid $c-black;
+        }
+      }
+    }
+  }
 
-.site-footer__logo {
-  width: 100px;
-  margin: 0 auto;
+  a {
+    @include transition(color);
+    @include on-event() {
+      color: $c-orange;
+    }
+
+    @include breakpoint($md) {
+      display: block;
+      padding-right: 10px;
+    }
+  }
+
+  p {
+    color: #9f9f9f;
+  }
 }

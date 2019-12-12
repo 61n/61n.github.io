@@ -1,0 +1,14 @@
+.ega-about {
+  color: $c-white;
+  background: #7859fc;
+}
+
+.ega-about__fb {
+  @include breakpoint($md) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    overflow: hidden;
+  }
+}

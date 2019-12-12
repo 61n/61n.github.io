@@ -27,7 +27,7 @@
   max-width: 300px;
 
   @include breakpoint($md) {
-    max-width: none;
+    max-width: 1000px;
   }
 }
 
