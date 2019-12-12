@@ -59,8 +59,13 @@
   }
 }
 
-.ega-logo {
+.ega-header__logo {
   width: auto;
   height: 36px;
   vertical-align: middle;
+}
+
+.ega-header__button {
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
 }
