@@ -91,6 +91,10 @@
   justify-content: space-between;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .text-right {
   text-align: right;
 }
@@ -137,10 +141,40 @@
   width: 100%;
 }
 
+.ht1 {
+  height: 100%;
+}
+
 .rel {
   position: relative;
 }
 
 .abs {
   position: absolute;
+}
+
+body {
+  position: relative;
+  overflow-y: visible;
+
+  &:after {
+    content: '';
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 0;
+    background: rgba($c-black, 0.5);
+  }
+
+  &.is-popup-showed {
+    overflow-y: hidden;
+
+    &:after {
+      display: block;
+    }
+  }
 }

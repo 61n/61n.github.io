@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-
   const detailBlock = document.getElementsByClassName('js-ega-detail')
 
   if (detailBlock) {
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
         video[0].src += '?autoplay=1'
         t.classList.add('hide')
       }
-
     })
   }
 
@@ -85,5 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     }
   }
+
+
+
 
 })

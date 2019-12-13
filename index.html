@@ -17,7 +17,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target="#primary-nav">
+<body data-spy="scroll" data-target="#primary-nav" class="">
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0&appId=2254989608072966&autoLogAppEvents=1"></script>
@@ -33,7 +33,6 @@
               <img class="ega-header__logo" src="./ega_logo.svg" alt="logo">
             </a>
           </h1>
-
         </div>
 
         <div class="col-md-6 hide block-md text-center">
@@ -533,21 +532,46 @@
         </div>
         <div class="col-12">
           <div class="mha ega-countdown__wrapper-form">
-            <form action="/page/default/submit" id="form-register" name="landing-page-id" class="ega-countdown__form">
+            <script>
+              const validForm = () => {
+                const form = document.querySelector('.js-countdown-form')
+                const nameRegex = /^[a-zA-Z][^#&<>\"~;$^%{}?\d]{1,20}$/
+                const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+                const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+
+                if (form) {
+                  const popup = document.querySelector('.js-ega-popup')
+                  const button = form.querySelector('.js-form-button')
+                  const name = form.querySelector('.js-form-name')
+                  const email = form.querySelector('.js-form-email')
+                  const phone = form.querySelector('.js-form-phone')
+
+                  if (popup && button && name && email && phone) {
+                    form.addEventListener('submit', (e) => {
+                      if (name.value.match(nameRegex) && phone.value.match(phoneRegex) && !email.value || email.value.match(emailRegex)) {
+                        document.body.classList.add('is-popup-showed')
+                        console.log(document.body)
+                      }
+                    })
+                  }
+                }
+              }
+            </script>
+            <form action="/page/default/submit" onsubmit="event.preventDefault(); return validForm();" id="form-register" name="landing-page-id" class="ega-countdown__form js-countdown-form">
               <div class="col-12 col-md-4 ega-countdown__input">
                 <label for="ega-countdown-input">Ho va ten (*)</label>
-                <input type="text" id="ega-countdown-input" placeholder="Nhap ho va ten" required>
+                <input class="js-form-name" type="text" id="ega-countdown-input" placeholder="Nhap ho va ten" required>
               </div>
               <div class="col-12 col-md-4 ega-countdown__input">
                 <label for="ega-countdown-email">Email</label>
-                <input type="email" id="ega-countdown-email" placeholder="Bo trong neu khong co">
+                <input class="js-form-email" type="email" id="ega-countdown-email" placeholder="Bo trong neu khong co">
               </div>
               <div class="col-12 col-md-4 ega-countdown__input">
                 <label for="ega-countdown-phone">So dien thoai (*)</label>
-                <input type="number" id="ega-countdown-phone" placeholder="Nhap so dien thoai" required>
+                <input class="js-form-phone" type="number" id="ega-countdown-phone" placeholder="Nhap so dien thoai" required>
               </div>
               <div class="col-12 text-center ega-countdown__submit">
-                <button type="submit" class="ega-button ega-countdown__button">ĐĂNG KÝ NGAY</button>
+                <button type="submit" class="ega-button ega-countdown__button js-form-button">ĐĂNG KÝ NGAY</button>
                 <p>*Bộ phận tư vấn sẽ liên hệ với bạn trong vòng 24h để xác nhận và thanh toán đơn hàng, vui lòng giữ máy bên mình.<br>
                   Chân thành cảm ơn</p>
               </div>
@@ -611,6 +635,24 @@
       </div>
     </div>
   </footer>
+
+    <div class="ega-overlap"></div>
+    <div class="ega-popup js-ega-popup">
+        <div class="container ht1">
+            <div class="row justify-center align-center ht1">
+                <div class="col-12 col-md-8">
+                    <div class="text-center ega-popup__block">
+                        <img src="ega_popup.png" class="ega-popup__image" alt="popup">
+                        <h2>ĐĂNG KÝ THÀNH CÔNG!</h2>
+                        <p>Cảm ơn bạn đã đăng ký thành công khóa học tại Kyna.vn!<br>
+                            Nhân viên CSKH Kyna.vn sẽ sớm liên hệ với bạn trong vòng 24 giờ.<br>
+                            <br>
+                          Hotline: <b>1900.6364.09</b> - Email: <b>hotro@kyna.vn</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="js/flip.js"></script>
