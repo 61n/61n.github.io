@@ -21,7 +21,6 @@
 }
 
 .ega-header__list {
-
   li {
     @include breakpoint($md) {
       &:not(last-child) {
@@ -63,6 +62,10 @@
   width: auto;
   height: 36px;
   vertical-align: middle;
+
+  @include breakpoint($md) {
+    height: 67px;
+  }
 }
 
 .ega-header__button {
