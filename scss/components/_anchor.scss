@@ -1,0 +1,10 @@
+.anchor {
+  display: block;
+  visibility: hidden;
+  position: relative;
+  transform: translateY(100px);
+
+  @include breakpoint($md) {
+    transform: translateY(-107px);
+  }
+}

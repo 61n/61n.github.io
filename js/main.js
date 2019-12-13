@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
   const select = (target, el) => el ? el.querySelector(target) : document.querySelector(target)
   const selectAll = (target, el) => el ? el.querySelectorAll(target) : document.querySelectorAll(target)
   const hasClass = (className, el) => el ? el.classList.contains(className) : document.classList.contains(className)
@@ -86,5 +87,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+  function animate(elem, style, unit, from, to, time, prop) {
+    if (!elem) {
+      return;
+    }
+    var start = new Date().getTime(),
+      timer = setInterval(function () {
+        var step = Math.min(1, (new Date().getTime() - start) / time);
+        if (prop) {
+          elem[style] = (from + step * (to - from))+unit;
+        } else {
+          elem.style[style] = (from + step * (to - from))+unit;
+        }
+        if (step === 1) {
+          clearInterval(timer);
+        }
+      }, 25);
+    if (prop) {
+      elem[style] = from+unit;
+    } else {
+      elem.style[style] = from+unit;
+    }
+  }
+
+  const anchors = selectAll('.js-anchor')
+
+  anchors.forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      e.preventDefault()
+      const idAnchor = anchor.getAttribute("href")
+      const toEl = select('#anchor-' + idAnchor.slice(1))
+      animate(document.scrollingElement || document.documentElement, "scrollTop", "", 0, toEl.offsetTop, 2000, true)
+    })
+  })
+
+
+
+  document.addEventListener('click', (e) => {
+    if (hasClass('is-popup-showed', document.body)) {
+      if (e.target === document.body || e.target === select('.js-popup-close')) {
+        document.body.classList.remove('is-popup-showed')
+      }
+    }
+  })
 
 })

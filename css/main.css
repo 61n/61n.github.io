@@ -367,6 +367,9 @@ p {
 .abs {
   position: absolute; }
 
+html, body {
+  margin: 0; }
+
 body {
   position: relative;
   overflow-y: visible; }
@@ -379,10 +382,10 @@ body {
     top: 0;
     left: 0;
     z-index: 99;
-    opacity: 0;
     background: rgba(36, 37, 38, 0.5); }
   body.is-popup-showed {
-    overflow-y: hidden; }
+    overflow-y: hidden;
+    height: 100%; }
     body.is-popup-showed:after {
       display: block; }
 
@@ -1184,6 +1187,18 @@ body {
     z-index: 5; } }
 
 .ega-popup {
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
   position: fixed;
   z-index: 100;
   top: 50%;
@@ -1212,6 +1227,26 @@ body {
   width: 150px;
   height: 150px; }
 
+.ega-popup__close {
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+  top: 10px;
+  right: 10px;
+  color: #242526;
+  opacity: 0.5; }
+  .ega-popup__close:hover, .ega-popup__close:active, .ega-popup__close:focus {
+    opacity: 1; }
+
 .ega-about {
   color: #ffffff;
   background: #7859fc; }
@@ -1229,6 +1264,19 @@ body {
     justify-content: flex-start;
     height: 100%;
     overflow: hidden; } }
+
+.anchor {
+  display: block;
+  visibility: hidden;
+  position: relative;
+  -webkit-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  transform: translateY(100px); }
+  @media (min-width: 992px) {
+    .anchor {
+      -webkit-transform: translateY(-107px);
+      -ms-transform: translateY(-107px);
+      transform: translateY(-107px); } }
 
 .ega-book h2 {
   color: #fca200;

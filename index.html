@@ -45,7 +45,7 @@
         </div>
 
         <div class="col-6 col-md-3 text-right">
-          <a class="ega-button ega-header__button">SIGN IN</a>
+          <a class="ega-button ega-header__button js-anchor" href="#ega-countdown">DANG KY NGAY</a>
         </div>
       </div>
     </div>
@@ -63,15 +63,16 @@
             <h2 class="">Content Hay</h2>
             <h3 class="">De khach mua ngay</h3>
             <p>Phuong phap tang doanh thu hieu qua</p>
-            <a class="ega-button ega-hero__button">Kham pha ngay</a>
+            <a class="ega-button ega-hero__button js-anchor" href="#ega-reason">Kham pha ngay</a>
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- end hero  -->
-  <section class="ega-reason">
-    <div class="container">
+   <section class="ega-reason">
+       <a id="anchor-ega-reason" class="anchor"></a>
+       <div class="container">
       <h2>TẠI SAO NÊN HỌC "CONTENT MARKETING"</h2>
       <img class="ega-reason__quote" src="./ega_quote.png" alt="quote">
 
@@ -244,7 +245,7 @@
           </div>
         </div>
       </div>
-      <a class="ega-button ega-benefit__button" href="#">Dang ky hoc ngay</a>
+      <a class="ega-button ega-benefit__button js-anchor" href="#ega-countdown">Dang ky hoc ngay</a>
     </div>
   </section>
 
@@ -396,7 +397,7 @@
               </div>
             </div>
             <div class="ega-video__button text-center">
-              <a href="#" class="ega-button">Trai nghiem ngay</a>
+              <a href="#ega-countdown" class="ega-button js-anchor">Trai nghiem ngay</a>
             </div>
           </div>
         </div>
@@ -519,7 +520,8 @@
   </section>
 
   <section class="ega-countdown">
-    <div class="container">
+      <a id="anchor-ega-countdown" class="anchor"></a>
+      <div class="container">
       <h2 class="text-center">ĐẶC BIỆT:<br>
         GIẢM ĐẾN <strong>71%</strong> HỌC PHÍ NGAY HÔM NAY</h2>
       <div class="row">
@@ -548,9 +550,9 @@
 
                   if (popup && button && name && email && phone) {
                     form.addEventListener('submit', (e) => {
-                      if (name.value.match(nameRegex) && phone.value.match(phoneRegex) && !email.value || email.value.match(emailRegex)) {
+
+                      if (name.value.match(nameRegex) && phone.value.match(phoneRegex) || !email.value || email.value.match(emailRegex)) {
                         document.body.classList.add('is-popup-showed')
-                        console.log(document.body)
                       }
                     })
                   }
@@ -636,12 +638,12 @@
     </div>
   </footer>
 
-    <div class="ega-overlap"></div>
     <div class="ega-popup js-ega-popup">
         <div class="container ht1">
             <div class="row justify-center align-center ht1">
                 <div class="col-12 col-md-8">
-                    <div class="text-center ega-popup__block">
+                    <div class="rel text-center ega-popup__block">
+                        <div class="abs ega-popup__close js-popup-close">x</div>
                         <img src="ega_popup.png" class="ega-popup__image" alt="popup">
                         <h2>ĐĂNG KÝ THÀNH CÔNG!</h2>
                         <p>Cảm ơn bạn đã đăng ký thành công khóa học tại Kyna.vn!<br>

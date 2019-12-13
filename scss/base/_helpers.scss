@@ -153,6 +153,9 @@
   position: absolute;
 }
 
+html, body {
+  margin: 0;
+}
 body {
   position: relative;
   overflow-y: visible;
@@ -166,12 +169,12 @@ body {
     top: 0;
     left: 0;
     z-index: 99;
-    opacity: 0;
     background: rgba($c-black, 0.5);
   }
 
   &.is-popup-showed {
     overflow-y: hidden;
+    height: 100%;
 
     &:after {
       display: block;

@@ -1,4 +1,6 @@
 .ega-popup {
+  @include transition();
+
   position: fixed;
   z-index: 100;
   top: 50%;
@@ -30,4 +32,17 @@
 .ega-popup__image {
   width: 150px;
   height: 150px;
+}
+
+.ega-popup__close {
+  @include transition(opacity);
+
+  top: 10px;
+  right: 10px;
+  color: $c-black;
+  opacity: 0.5;
+
+  @include on-event() {
+    opacity: 1;
+  }
 }
