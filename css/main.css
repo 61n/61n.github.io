@@ -403,7 +403,10 @@ body {
   z-index: 10;
   padding: 10px 0 12px 0; }
   .ega-header + * {
-    margin-top: 63px; }
+    margin-top: 70px; }
+    @media (min-width: 992px) {
+      .ega-header + * {
+        margin-top: 89px; } }
 
 .ega-header__wrapper-logo {
   margin: 0; }
